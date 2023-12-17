@@ -17,7 +17,7 @@ export const Logout = () => {
 
         /* Navigate (redireccion) al login */
         navigate("/login");
-        location.reload();
+        /* location.reload(); */
     });
 
     return (
