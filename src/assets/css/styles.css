@@ -320,6 +320,10 @@ header nav {
     width: 100%;
 }
 
+header nav .ham-manu {
+    display: none;
+}
+
 header nav ul {
     display: flex;
     align-items: center;
@@ -600,4 +604,48 @@ article .post-user {
     align-items: spa;
     text-align: center;
     font-size: 18px;
+}
+
+/* ----------New Publication---------- */
+.new-publication {
+    padding-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.new-publication form div {
+    position: relative;
+    padding: 0px;
+}
+
+.new-publication form div:nth-child(2) {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.new-publication form div textarea {
+    padding: 10px;
+    background-color: transparent;
+    border: 2px solid #1F4172;
+    border-radius: 5px;
+    width: 500px;
+    font-size: 12px;
+    transition: all 0.2s ease;
+}
+
+.new-publication form div label {
+    position: absolute;
+    left: 10px;
+    top: 12px;
+    padding: 0 4px;
+    background-color: #FDF0F0;
+    transition: all 0.2s ease;
+    pointer-events: none;
+}
+
+.new-publication form div textarea:focus~label,
+.new-publication form div textarea:not(:placeholder-shown)~label {
+    top: -8px;
+    font-size: 13px;
 }

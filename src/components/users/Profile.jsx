@@ -31,6 +31,12 @@ export const Profile = () => {
         getPublications(1, true);
     }, [userid]);
 
+    useEffect(() => {
+        getDataUser();
+        getCounter();
+        getPublications(1, true);
+    }, [counters]);
+
     const getDataUser = async () => {
         let dataUser = await GetProfile(userid, setProfile);
         if (dataUser.following && dataUser.following._id) setIFollow(true);

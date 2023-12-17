@@ -1,0 +1,3 @@
+[build]
+  base = "reactconnect-backend"
+  command = "npm start"

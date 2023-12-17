@@ -4,6 +4,7 @@ import { useAuth } from '../../hooks/useAuth';
 import { PublicationList } from './PublicationList';
 import { Petition } from '../../helpers/Petition';
 import { Global } from '../../helpers/Global';
+import { NewPublication } from './NewPublication';
 
 export const Feed = () => {
 
@@ -45,6 +46,8 @@ export const Feed = () => {
 
     return (
         <>
+            <NewPublication />
+
             <div className="content__header">
                 <h1 className="content__title">Timeline</h1>
                 <button className="content__button" onClick={() => getPublications(1, true)}>Mostrar nuevas</button>

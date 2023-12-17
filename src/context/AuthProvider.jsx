@@ -15,6 +15,10 @@ export const AuthProvider = ({ children }) => {
         authUser();
     }, []);
 
+    useEffect(() => {
+        authUser();
+    }, [counters]);
+
     const authUser = async () => {
         /* Sacar datos del usuario identificado del localStorage */
         const token = localStorage.getItem("token");

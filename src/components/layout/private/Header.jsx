@@ -6,7 +6,7 @@ export const Header = () => {
         <header className="layout__navbar">
 
             <div className="title">
-                <NavLink to="/" className="navbar__title">REACT|SOCIAL</NavLink>
+                <NavLink to="/" className="navbar__title">ReactConnect</NavLink>
             </div>
 
             <Nav />
