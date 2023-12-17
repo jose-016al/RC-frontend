@@ -42,8 +42,8 @@ export const Login = () => {
             /* Setear datos en el auth */
             setAuth(data.user);
             /* Redirrecion */
-            navigate("/social");
             location.reload();
+            /* navigate("/social"); */
         } else {
             setSaved("error");
         }
