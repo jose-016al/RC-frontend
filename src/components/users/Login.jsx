@@ -43,7 +43,7 @@ export const Login = () => {
             setAuth(data.user);
             /* Redirrecion */
             navigate("/social");
-            window.location.reload();
+            location.reload();
         } else {
             setSaved("error");
         }
