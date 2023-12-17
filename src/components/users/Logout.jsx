@@ -16,7 +16,7 @@ export const Logout = () => {
         setCounters({});
 
         /* Navigate (redireccion) al login */
-        navigate("/login");
+        /* navigate("/login"); */
         location.reload();
     });
 

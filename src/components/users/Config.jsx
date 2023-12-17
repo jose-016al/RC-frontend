@@ -18,7 +18,7 @@ export const Config = () => {
         const { data } = await Petition(`${Global.url}user/update`, "PUT", user, false, token);
 
         if (data.status === "success") {
-            delete data.user.pawssword
+            /* delete data.user.password; */
             const updatedUser = { ...auth, ...data.user };
             setAuth(updatedUser);
             setSaved("saved");
