@@ -11,12 +11,13 @@ export const Logout = () => {
         /* Vaciar el localStorage */
         localStorage.clear();
 
-        /* Setear estados gloables a vacio */
+        /* Setear estados globales a vacio */
         setAuth({});
         setCounters({});
 
         /* Navigate (redireccion) al login */
         navigate("/login");
+        location.reload();
     });
 
     return (

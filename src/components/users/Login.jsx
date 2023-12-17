@@ -5,6 +5,7 @@ import { useAuth } from "../../hooks/useAuth";
 import { Link } from "react-router-dom";
 import { useFormik } from "formik";
 import * as Yup from "yup";
+import { useNavigate } from "react-router-dom";
 
 const validationSchema = Yup.object().shape({
     email: Yup.string()
@@ -17,6 +18,7 @@ export const Login = () => {
 
     const [saved, setSaved] = useState("not_sended");
     const { setAuth } = useAuth();
+    const navigate = useNavigate();
 
     const formik = useFormik({
         initialValues: {
@@ -40,6 +42,7 @@ export const Login = () => {
             /* Setear datos en el auth */
             setAuth(data.user);
             /* Redirrecion */
+            navigate("/social");
             window.location.reload();
         } else {
             setSaved("error");
