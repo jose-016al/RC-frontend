@@ -2,20 +2,16 @@
 
         /* ----------Estilos globales---------- */
     .layout {
-        display: grid;
-        grid-template-areas:
-            "nav nav"
-            "aside content";
-        grid-template-columns: 15% 75%;
-        display: flex;
-        flex-direction: column;
+        display: block;
+        width: 110%;
     }
     
         /* Header */
     header {
         grid-area: none;
+        width: 100%;
         background-color: #132043;
-        display: none;
+        display: block;
         align-items: center;
     }
 

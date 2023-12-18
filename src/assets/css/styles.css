@@ -3,8 +3,6 @@
     padding: 0;
 }
 
-
-
 .error {
     color: red;
     display: flex;
@@ -240,7 +238,6 @@
 
 /* ----------Estilos globales---------- */
 .layout {
-    width: 100%;
     display: grid;
     grid-template-areas:
         "nav nav"
