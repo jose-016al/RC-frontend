@@ -17,6 +17,7 @@ export const Profile = () => {
     const [publications, setPublications] = useState([]);
     const [page, setPage] = useState(1);
     const [more, setMore] = useState(true);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         getDataUser();
@@ -82,6 +83,7 @@ export const Profile = () => {
                 setPage(1);
             }
             setPublications(newPublications);
+            setLoading(false);
         }
 
         /* Paginacion */
@@ -146,6 +148,7 @@ export const Profile = () => {
                 setPage={setPage}
                 more={more}
                 setMore={setMore}
+                loading={loading}
             />
             <br />
         </>

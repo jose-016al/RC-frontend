@@ -41,24 +41,26 @@ export const NewPublication = () => {
     }
 
     return (
-        <div className="new-publication">
+        <>
             {saved == "saved" ? <strong className="alert alert-success">Post publicado</strong> : ""}
             {saved == "error" ? <strong className="alert alert-danger">No se ha podido publicar el post</strong> : ""}
-            <form id='publication-form' onSubmit={savePublication}>
-                <div>
-                    <textarea name="text" onChange={changed} placeholder="&nbsp;" />
-                    <label htmlFor="text">¿Que esta pesando hoy?</label>
-                </div>
-                <div>
-                    <div className="form-post__inputs" id='file0-publication'>
-                        <input type="file" name="file0" id='file' className="form-post__image" />
+            <div className="new-publication">
+                <form id='publication-form' onSubmit={savePublication}>
+                    <div>
+                        <textarea name="text" onChange={changed} placeholder="&nbsp;" />
+                        <label htmlFor="text">¿Que esta pesando hoy?</label>
                     </div>
+                    <div>
+                        <div className="form-post__inputs" id='file0-publication'>
+                            <input type="file" name="file0" id='file' className="form-post__image" />
+                        </div>
 
-                    <div className='button-more'>
-                        <input type="submit" value="Enviar" />
+                        <div className='button-more'>
+                            <input type="submit" value="Enviar" />
+                        </div>
                     </div>
-                </div>
-            </form>
-        </div>
+                </form>
+            </div>
+        </>
     )
 }

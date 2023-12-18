@@ -38,7 +38,7 @@ export const ListUser = ({ users, getUsers, following, setFollowing, page, setPa
     return (
         <>
             <div className="content__posts">
-                {loading ? "Cargando..." : ""}
+                {loading ? <div className='custom-loader-container'><div className="custom-loader"></div></div> : ""}
 
                 {users.map(user => {
                     return (

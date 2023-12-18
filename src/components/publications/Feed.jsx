@@ -11,6 +11,7 @@ export const Feed = () => {
     const [publications, setPublications] = useState([]);
     const [page, setPage] = useState(1);
     const [more, setMore] = useState(true);
+    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         getPublications(1, false);
@@ -31,6 +32,7 @@ export const Feed = () => {
                 newPublications = [...publications, ...data.publications];
             }
             setPublications(newPublications);
+            setLoading(false);
         }
 
         /* Paginacion */
@@ -56,6 +58,7 @@ export const Feed = () => {
                 setPage={setPage}
                 more={more}
                 setMore={setMore}
+                loading={loading}
             />
             <br />
         </>

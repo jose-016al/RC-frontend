@@ -49,11 +49,16 @@ export const Login = () => {
         }
     }
 
+    // Reset saved state after 10 seconds
+    setTimeout(() => {
+        setSaved("not_sended");
+    }, 10000);
+
     return (
         <>
+            {saved == "login" ? <strong className="alert alert-success">Se ha identificado</strong> : ""}
+            {saved == "error" ? <strong className="alert alert-danger">El usuario o la contraseña son incorrecta</strong> : ""}
             <div className="login-background">
-                {saved == "login" ? <strong className="alert alert-success">Se ha identificado</strong> : ""}
-                {saved == "error" ? <strong className="alert alert-danger">El usuario o la contraseña son incorrecta</strong> : ""}
                 <div className="login-title">
                     <span>LOGIN</span>
                 </div>

@@ -5,7 +5,7 @@ import { Petition } from '../../helpers/Petition';
 import { useAuth } from '../../hooks/useAuth';
 import ReactTimeAgo from 'react-time-ago';
 
-export const PublicationList = ({ publications, getPublications, page, setPage, more, setMore }) => {
+export const PublicationList = ({ publications, getPublications, page, setPage, more, setMore, loading }) => {
 
     const { auth } = useAuth();
 
@@ -28,6 +28,7 @@ export const PublicationList = ({ publications, getPublications, page, setPage, 
 
     return (
         <>
+            {loading ? <div className='custom-loader-container'><div className="custom-loader"></div></div> : ""}
             {publications.map(publication => {
                 return (
                     <article key={publication._id}>

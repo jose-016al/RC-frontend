@@ -8,7 +8,7 @@ export const Privatelayout = () => {
     const { auth, loading } = useAuth();
 
     if (loading) {
-        return <h1>Cargando</h1>
+        return <div className='custom-loader-container'><div className="custom-loader"></div></div>
     } else {
         return (
             <div className='layout'>

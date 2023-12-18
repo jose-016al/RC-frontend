@@ -322,6 +322,96 @@
     display: inline-block;
 }
 
+/* Estilos para los mensajes de alerta */
+.alert {
+    position: fixed;
+    padding: 10px;
+    left: 0;
+    right: 0;
+    width: 10%; 
+    height: 20px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 50%; 
+    animation: showUp 1s forwards, expandAndStay 2s forwards, shrinkAndHide 1s forwards 10s; 
+    overflow: hidden; 
+}
+
+.alert strong {
+    margin: 0; 
+    font-size: 14px; 
+    white-space: nowrap; 
+}
+
+.alert-danger {
+    background-color: rgba(255, 0, 0, 0.9);
+}
+
+.alert-success {
+    background-color: rgba(0, 255, 120, 0.9);
+}
+
+@keyframes showUp {
+    from {
+        top: -50px;
+        width: 30%; 
+        border-radius: 50%; 
+    }
+    to {
+        top: 50px;
+    }
+}
+
+@keyframes expandAndStay {
+    from {
+        width: 0%; 
+        border-radius: 50%;
+    }
+    to {
+        width: 30%; 
+        border-radius: 0;
+    }
+}
+
+@keyframes shrinkAndHide {
+    from {
+        top: 50px;
+        width: 30%; 
+        border-radius: 0;
+        height: 50px; 
+    }
+    to {
+        top: -50px;
+        width: 0%; 
+        border-radius: 50%; 
+        height: 10px; 
+    }
+}
+
+/* Estilos para loading */
+.custom-loader-container {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.custom-loader {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: conic-gradient(#0000 10%, #1F4172);
+    -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
+    animation: s3 1s infinite linear;
+}
+
+@keyframes s3 {
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+
 /* ----------header y nav---------- */
 header {
     grid-area: nav;
