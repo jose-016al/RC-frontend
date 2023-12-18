@@ -73,7 +73,7 @@
         background-color: #132043;
         z-index: 1;
         width: 70%;
-        top: 9%;
+        top: 47px;
         flex-direction: column;
         right: -100%;
         transition: 1s ease;

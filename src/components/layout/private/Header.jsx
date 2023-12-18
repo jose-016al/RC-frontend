@@ -23,7 +23,7 @@ export const Header = () => {
         </NavLink>
       </div>
 
-      <Nav isMenuOpen={isMenuOpen} />
+      <Nav isMenuOpen={isMenuOpen} closeMenu={closeMenu} />
 
       <div className="ham-menu-container" onClick={toggleMenu}>
         <div className={`ham-menu ${isMenuOpen ? "active" : ""}`}>

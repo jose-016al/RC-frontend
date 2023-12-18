@@ -3,7 +3,7 @@ import avatar from '../../../assets/img/user.png';
 import { useAuth } from '../../../hooks/useAuth';
 import { Global } from '../../../helpers/Global';
 
-export const Nav = ({ isMenuOpen }) => {
+export const Nav = ({ isMenuOpen, closeMenu }) => {
 
     const { auth } = useAuth();
 
@@ -12,19 +12,19 @@ export const Nav = ({ isMenuOpen }) => {
 
             <ul className='nav-right'>
                 <li>
-                    <NavLink to="/social">
+                    <NavLink to="/social" onClick={closeMenu}>
                         <i className="fa-solid fa-house"></i>
                         <span>Inicio</span>
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/social/feed">
+                    <NavLink to="/social/feed" onClick={closeMenu}>
                         <i className="fa-solid fa-list"></i>
                         <span>Timeline</span>
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/social/people">
+                    <NavLink to="/social/people" onClick={closeMenu}>
                         <i className="fa-solid fa-user"></i>
                         <span>Gente</span>
                     </NavLink>
@@ -39,18 +39,18 @@ export const Nav = ({ isMenuOpen }) => {
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to={`/social/profile/${auth._id}`}>
+                    <NavLink to={`/social/profile/${auth._id}`} onClick={closeMenu}>
                         <span>{auth.nick}</span>
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to="/social/settings">
+                    <NavLink to="/social/settings" onClick={closeMenu}>
                         <i className="fa-solid fa-gear"></i>
                         <span>Ajustes</span>
                     </NavLink>
                 </li>
                 <li className='nav-logout'>
-                    <NavLink to="/social/logout">
+                    <NavLink to="/social/logout" onClick={closeMenu}>
                         <i className="fa-solid fa-arrow-right-from-bracket"></i>
                         <span>Cerrar sesión</span>
                     </NavLink>
