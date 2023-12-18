@@ -15,20 +15,24 @@
     .ham-menu-container {
         display: block;
         position: fixed;
-        top: 450px;
-        right: 10px;
+        bottom: 0;
+        right: 0;
+        margin: 5px;
+        
     }
 
     .ham-menu {
         background-color: #132043;
+        border-radius: 25px;
         height: 50px;
         width: 50px;
         position: relative;
+        padding: 2px;
     }
 
     .ham-menu span {
         height: 5px;
-        width: 80%;
+        width: 70%;
         background-color: white;
         border-radius: 25px;
         position: absolute;
@@ -64,9 +68,19 @@
             rotate(45deg);
     }
 
-    header nav {
+    header .navbar {
+        position: fixed;
+        background-color: #132043;
+        z-index: 1;
+        width: 70%;
+        top: 9%;
         flex-direction: column;
-        display: none;
+        right: -100%;
+        transition: 1s ease;
+    }
+
+    header .navbar.active {
+        right: 0;
     }
 
     header nav ul {

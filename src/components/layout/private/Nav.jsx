@@ -3,12 +3,12 @@ import avatar from '../../../assets/img/user.png';
 import { useAuth } from '../../../hooks/useAuth';
 import { Global } from '../../../helpers/Global';
 
-export const Nav = () => {
+export const Nav = ({ isMenuOpen }) => {
 
     const { auth } = useAuth();
 
     return (
-        <nav>
+        <nav className={`navbar ${isMenuOpen ? 'active' : ''}`}>
 
             <ul className='nav-right'>
                 <li>

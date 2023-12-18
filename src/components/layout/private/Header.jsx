@@ -23,7 +23,7 @@ export const Header = () => {
         </NavLink>
       </div>
 
-      <Nav />
+      <Nav isMenuOpen={isMenuOpen} />
 
       <div className="ham-menu-container" onClick={toggleMenu}>
         <div className={`ham-menu ${isMenuOpen ? "active" : ""}`}>
@@ -33,13 +33,6 @@ export const Header = () => {
         </div>
       </div>
 
-      {/* Cerrar el menú al hacer clic en cualquier lugar fuera del menú */}
-      {isMenuOpen && (
-        <div
-          className="overlay"
-          onClick={closeMenu}
-        ></div>
-      )}
     </header>
   );
 };
