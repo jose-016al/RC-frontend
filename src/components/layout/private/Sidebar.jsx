@@ -11,7 +11,7 @@ export const Sidebar = () => {
     return (
         <aside>
             <div>
-                <div className="profile-info">
+                <div className="profile-info" id="profile-info-aside">
                     <div className="profile-info-image">
                         {auth.image != "default.png" && <img src={`${Global.url}user/avatar/${auth.image}`} alt="Foto de perfil" />}
                         {auth.image == "default.png" && <img src={avatar} alt="Foto de perfil" />}
@@ -23,7 +23,7 @@ export const Sidebar = () => {
                     </div>
                 </div>
 
-                <div className="profile-info-stats">
+                <div className="profile-info-stats" id='profile-info-stats-aside'>
                     <div>
                         <Link to={`/social/following/${auth._id}`}>
                             <span>Siguiendo</span>

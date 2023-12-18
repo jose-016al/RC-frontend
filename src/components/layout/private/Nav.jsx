@@ -9,7 +9,6 @@ export const Nav = () => {
 
     return (
         <nav>
-            
 
             <ul className='nav-right'>
                 <li>

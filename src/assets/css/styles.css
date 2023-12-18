@@ -350,8 +350,8 @@ header nav {
     width: 100%;
 }
 
-header nav .ham-manu {
-    display: none;
+.ham-menu-container {
+    
 }
 
 header nav ul {

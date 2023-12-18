@@ -8,12 +8,84 @@
     
         /* Header */
     header {
-        grid-area: none;
-        width: 100%;
-        background-color: #132043;
+        flex-direction: column;
+        position: relative;
+    }
+
+    .ham-menu-container {
         display: block;
+        position: fixed;
+        top: 450px;
+        right: 10px;
+    }
+
+    .ham-menu {
+        background-color: #132043;
+        height: 50px;
+        width: 50px;
+        position: relative;
+    }
+
+    .ham-menu span {
+        height: 5px;
+        width: 80%;
+        background-color: white;
+        border-radius: 25px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: .3s ease;
+    }
+
+    .ham-menu span:nth-child(1) {
+        top: 25%;
+    }
+
+    .ham-menu span:nth-child(3) {
+        top: 75%;
+    }
+
+    .ham-menu.active span:nth-child(3) {
+        top: 50%;
+        transform: 
+            translate(-50%, -50%)
+            rotate(-45deg);
+    }
+
+    .ham-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .ham-menu.active span:nth-child(1) {
+        top: 50%;
+        transform: 
+            translate(-50%, -50%)
+            rotate(45deg);
+    }
+
+    header nav {
+        flex-direction: column;
+        display: none;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        justify-content: center;
         align-items: center;
-        overflow: hidden;
+    }
+
+    header nav ul li {
+        padding: 20px;
+    }
+
+    /* iamgen */
+    .image-profile {
+        display: none;
+    }
+
+    header nav ul:nth-child(2) li:first-child a {
+        display: none;
     }
 
         /* ----------Aside---------- */
@@ -21,8 +93,8 @@
         min-height: 10vh;
     }
 
-    .profile-info,
-    .profile-info-stats {
+    #profile-info-aside,
+    #profile-info-stats-aside {
         display: none;
     }
 
