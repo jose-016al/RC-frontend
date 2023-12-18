@@ -2,7 +2,6 @@
 
         /* ----------Estilos globales---------- */
     .layout {
-        max-width: 100vh;
         display: grid;
         grid-template-areas:
             "nav nav"
@@ -16,7 +15,7 @@
     header {
         grid-area: none;
         background-color: #132043;
-        display: block;
+        display: none;
         align-items: center;
     }
 
