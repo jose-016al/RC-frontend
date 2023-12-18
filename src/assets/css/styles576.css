@@ -1,24 +1,55 @@
 @media screen and (max-width: 576px) {
 
-    /* Header */
-    .ham-menu {
-        background-color: red;
-    }
-
-    body {
-        background-color: red;
-    }
-
-
-    aside {
-        display: none;
-    }
-
+        /* ----------Estilos globales---------- */
     .layout {
         display: grid;
         grid-template-areas:
             "nav nav"
             "content content";
-        background-color: #FDF0F0;
+        grid-template-columns: 25% 75%;
     }
+    
+        /* Header */
+    header {
+        grid-area: nav;
+        background-color: #132043;
+        display: block;
+        align-items: center;
+    }
+
+        /* ----------Aside---------- */
+    aside {
+        display: none;
+    }
+
+        /* ----------New Publication---------- */
+    .new-publication {
+        padding-top: 10px;
+        display: none;
+        justify-content: center;
+    }
+
+
+        /* ----------Section---------- */
+    article div {
+        justify-content: center;
+    }
+
+    article .post-user div h4 {
+        margin: 0px 0px 10px 25px;
+    }
+
+    article .post-user div img {
+        width: 100%;
+    }
+
+        /* ----------config---------- */
+    .config-form {
+        width: 90%;
+    }
+
+    .config-form .config-form-container {
+        flex-direction: column;
+    }
+    
 }
