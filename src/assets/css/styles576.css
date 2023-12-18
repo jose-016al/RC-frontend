@@ -3,7 +3,7 @@
         /* ----------Estilos globales---------- */
     .layout {
         display: block;
-        width: 110%;
+        
     }
     
         /* Header */
@@ -13,6 +13,7 @@
         background-color: #132043;
         display: block;
         align-items: center;
+        overflow: hidden;
     }
 
         /* ----------Aside---------- */
