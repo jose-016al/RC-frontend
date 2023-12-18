@@ -47,10 +47,10 @@ export const NewPublication = () => {
             <form id='publication-form' onSubmit={savePublication}>
                 <div>
                     <textarea name="text" onChange={changed} placeholder="&nbsp;" />
-                    <label htmlFor="text">¿Que estas pesando hoy?</label>
+                    <label htmlFor="text">¿Que esta pesando hoy?</label>
                 </div>
                 <div>
-                    <div className="form-post__inputs">
+                    <div className="form-post__inputs" id='file0-publication'>
                         <input type="file" name="file0" id='file' className="form-post__image" />
                     </div>
 

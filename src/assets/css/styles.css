@@ -3,6 +3,8 @@
     padding: 0;
 }
 
+
+
 .error {
     color: red;
     display: flex;
@@ -260,7 +262,7 @@
 .button-more input[type="submit"] {
     background-color: #1F4172;
     color: white;
-    padding: 15px;
+    padding: 10px 15px 10px 15px;
     font-size: 15px;
     border: none;
     border-radius: 25px;
@@ -290,6 +292,36 @@
 .people-buttons .unfollow:hover {
     background-color: rgb(255, 0, 0);
     color: white;
+}
+
+.form-post__inputs {
+    position: relative;
+    display: inline-block;
+}
+  
+.form-post__inputs::before {
+    background-color: #1F4172;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 25px;
+    content: 'Seleccionar imagen';
+    font-size: 15px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+  
+.form-post__inputs input[type="file"] {
+    opacity: 0;
+    width: 150px;
+    height: 15px;
+    padding: 10px;
+    display: inline-block;
 }
 
 /* ----------header y nav---------- */
@@ -608,14 +640,17 @@ article .post-user {
 
 /* ----------New Publication---------- */
 .new-publication {
-    padding-top: 10px;
-    display: flex;
-    justify-content: center;
+    padding: 10px;
 }
 
 .new-publication form div {
     position: relative;
     padding: 0px;
+}
+
+.new-publication form div:nth-child(1) {
+    display: flex;
+    margin: 5px;
 }
 
 .new-publication form div:nth-child(2) {
@@ -629,7 +664,10 @@ article .post-user {
     background-color: transparent;
     border: 2px solid #1F4172;
     border-radius: 5px;
-    width: 500px;
+    width: 90%;
+    min-height: 30px;
+    max-height: 100px;
+    resize: vertical;
     font-size: 12px;
     transition: all 0.2s ease;
 }
@@ -649,3 +687,5 @@ article .post-user {
     top: -8px;
     font-size: 13px;
 }
+
+/* Estilos para el input file */

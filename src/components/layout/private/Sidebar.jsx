@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import avatar from '../../../assets/img/user.png';
 import { Global } from '../../../helpers/Global';
 import { useAuth } from '../../../hooks/useAuth';
+import { NewPublication } from '../../publications/NewPublication';
 
 export const Sidebar = () => {
 
@@ -43,6 +44,8 @@ export const Sidebar = () => {
                     </div>
                 </div>
             </div>
+
+            <NewPublication />
         </aside>
     )
 }

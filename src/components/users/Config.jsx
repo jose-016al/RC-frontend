@@ -92,7 +92,9 @@ export const Config = () => {
                                 {auth.image == "default.png" && <img src={avatar} className="container-avatar__img" alt="Foto de perfil" />}
                             </div>
                         </div>
-                        <input type="file" name="file0" id='file' />
+                        <div className="form-post__inputs" id='file0-profile'>
+                            <input type="file" name="file0" id='file' className="form-post__image" />
+                        </div>
                     </div>
                     
                     <div className="button-more">

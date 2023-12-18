@@ -2,16 +2,19 @@
 
         /* ----------Estilos globales---------- */
     .layout {
+        max-width: 100vh;
         display: grid;
         grid-template-areas:
             "nav nav"
-            "content content";
-        grid-template-columns: 25% 75%;
+            "aside content";
+        grid-template-columns: 15% 75%;
+        display: flex;
+        flex-direction: column;
     }
     
         /* Header */
     header {
-        grid-area: nav;
+        grid-area: none;
         background-color: #132043;
         display: block;
         align-items: center;
@@ -19,16 +22,13 @@
 
         /* ----------Aside---------- */
     aside {
-        display: none;
+        min-height: 10vh;
     }
 
-        /* ----------New Publication---------- */
-    .new-publication {
-        padding-top: 10px;
+    .profile-info,
+    .profile-info-stats {
         display: none;
-        justify-content: center;
     }
-
 
         /* ----------Section---------- */
     article div {
