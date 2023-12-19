@@ -336,6 +336,7 @@
     border-radius: 50%; 
     animation: showUp 1s forwards, expandAndStay 2s forwards, shrinkAndHide 1s forwards 10s; 
     overflow: hidden; 
+    z-index: 2;
 }
 
 .alert strong {
@@ -410,6 +411,13 @@
     display: grid;
     place-items: center;
     min-height: 210px;
+    text-align: center;
+}
+
+.custom-loader-container-register {
+    display: grid;
+    place-items: center;
+    min-height: 390px;
     text-align: center;
 }
 

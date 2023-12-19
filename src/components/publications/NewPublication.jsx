@@ -40,6 +40,11 @@ export const NewPublication = () => {
         }
     }
 
+    // Reset saved state after 10 seconds
+    setTimeout(() => {
+        setSaved("not_sended");
+    }, 16000);
+
     return (
         <>
             {saved == "saved" ? <strong className="alert alert-success">Post publicado</strong> : ""}

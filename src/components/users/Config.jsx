@@ -44,6 +44,11 @@ export const Config = () => {
         }
     }
 
+    // Reset saved state after 10 seconds
+    setTimeout(() => {
+        setSaved("not_sended");
+    }, 16000);
+
     return (
         <>
             <div className="content-title">

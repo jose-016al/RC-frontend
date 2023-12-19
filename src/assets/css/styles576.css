@@ -1,5 +1,17 @@
 @media screen and (max-width: 576px) {
 
+    .login-field {
+        min-height: 100vh;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        margin-top: 100px;
+    }
+
+    .login-background {
+        min-width: 390px;
+    }
+
         /* ----------Estilos globales---------- */
     .layout {
         display: block;
