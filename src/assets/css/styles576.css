@@ -3,7 +3,47 @@
         /* ----------Estilos globales---------- */
     .layout {
         display: block;
-        
+    }
+
+    .alert {
+        z-index: 3;
+    }
+
+    @keyframes showUp {
+        from {
+            top: -50px;
+            width: 80%; 
+            border-radius: 50%; 
+        }
+        to {
+            top: 50px;
+        }
+    }
+    
+    @keyframes expandAndStay {
+        from {
+            width: 0%; 
+            border-radius: 50%;
+        }
+        to {
+            width: 80%; 
+            border-radius: 0;
+        }
+    }
+    
+    @keyframes shrinkAndHide {
+        from {
+            top: 50px;
+            width: 80%; 
+            border-radius: 0;
+            height: 50px; 
+        }
+        to {
+            top: -50px;
+            width: 0%; 
+            border-radius: 50%; 
+            height: 10px; 
+        }
     }
     
         /* Header */
@@ -18,7 +58,7 @@
         bottom: 0;
         right: 0;
         margin: 5px;
-        
+        z-index: 2;
     }
 
     .ham-menu {
@@ -71,7 +111,7 @@
     header .navbar {
         position: fixed;
         background-color: #132043;
-        z-index: 1;
+        z-index: 2;
         width: 70%;
         top: 47px;
         flex-direction: column;
@@ -113,16 +153,50 @@
     }
 
         /* ----------Section---------- */
+    article {
+        padding: 5px 15px 5px 15px;
+    }
+
     article div {
         justify-content: center;
     }
 
+    article .post-user {
+        width: 100%;
+    }
+
+    article .post-user div {
+        padding-top: 15px;
+        display: flex;
+        justify-content: flex-start;
+    }
+
     article .post-user div h4 {
-        margin: 0px 0px 10px 25px;
+        margin: 0px 0px 5px 0px;
+    }
+
+    article .post-user div a:nth-child(1) {
+        padding-left: 20px;
+    }
+
+    article .post-user div a {
+        padding: 0px 0px 5px 0px;
     }
 
     article .post-user div img {
         width: 100%;
+    }
+
+    .people-buttons {
+        width: 100%;
+    }
+
+    article .people {
+        flex-direction: column;
+    }
+
+    article .people div {
+        justify-content: center;
     }
 
         /* ----------config---------- */
@@ -134,4 +208,16 @@
         flex-direction: column;
     }
     
+    /* ----------Profile---------- */
+    .profile .profile-info-name-user {
+        padding: 5px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        flex-direction: column-reverse;
+    }
+
+    .delete-publications {
+        width: 0%;
+    }
 }

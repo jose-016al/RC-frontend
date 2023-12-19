@@ -268,6 +268,7 @@
 
 .people-buttons {
     width: 20%;
+    max-height: 40px;
 }
 
 .people-buttons button {
@@ -577,7 +578,7 @@ article .post-user {
 }
 
 article .post-user span {
-    padding-left: 5px;
+    padding: 0px 5px 0px 5px;
 }
 
 article .post-user div a {
@@ -729,6 +730,7 @@ article .post-user {
 /* ----------New Publication---------- */
 .new-publication {
     padding: 10px;
+    z-index: 1;
 }
 
 .new-publication form div {
