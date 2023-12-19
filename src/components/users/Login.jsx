@@ -17,7 +17,7 @@ const validationSchema = Yup.object().shape({
 export const Login = () => {
 
     const [saved, setSaved] = useState("not_sended");
-    const { setAuth } = useAuth();
+    const { setAuth, loading } = useAuth();
     const navigate = useNavigate();
 
     const formik = useFormik({
@@ -52,7 +52,7 @@ export const Login = () => {
     // Reset saved state after 10 seconds
     setTimeout(() => {
         setSaved("not_sended");
-    }, 10000);
+    }, 16000);
 
     return (
         <>
@@ -63,32 +63,38 @@ export const Login = () => {
                     <span>LOGIN</span>
                 </div>
 
-                <form className="login-form" id="login" onSubmit={formik.handleSubmit}>
-                    <div className="form-group">
-                        <input type="email" name="email"
-                            value={formik.values.email}
-                            onChange={formik.handleChange} 
-                            placeholder="&nbsp;" />
-                        <label htmlFor="email">Correo electronico</label>
+                {loading ? (
+                    <div className='custom-loader-container-login'>
+                        <div className="custom-loader-login"></div>
                     </div>
-                    <div className="error">
-                        {formik.errors.email && formik.touched.email ? formik.errors.email : ""}
-                    </div>
-                    <div className="form-group">
-                        <input type="password" name="password"
-                            value={formik.values.password}
-                            onChange={formik.handleChange}
-                            placeholder="&nbsp;" />
-                        <label htmlFor="password">Contraseña</label>
-                    </div>
-                    <div className="error">
-                        {formik.errors.password && formik.touched.password ? formik.errors.password : ""}
-                    </div>
-                    <div className="form-group button">
-                        <Link to="/register">Registro</Link>
-                        <input type="submit" value="Identificate" />
-                    </div>
-                </form>
+                ) : (
+                    <form className="login-form" id="login" onSubmit={formik.handleSubmit}>
+                        <div className="form-group">
+                            <input type="email" name="email"
+                                value={formik.values.email}
+                                onChange={formik.handleChange} 
+                                placeholder="&nbsp;" />
+                            <label htmlFor="email">Correo electronico</label>
+                        </div>
+                        <div className="error">
+                            {formik.errors.email && formik.touched.email ? formik.errors.email : ""}
+                        </div>
+                        <div className="form-group">
+                            <input type="password" name="password"
+                                value={formik.values.password}
+                                onChange={formik.handleChange}
+                                placeholder="&nbsp;" />
+                            <label htmlFor="password">Contraseña</label>
+                        </div>
+                        <div className="error">
+                            {formik.errors.password && formik.touched.password ? formik.errors.password : ""}
+                        </div>
+                        <div className="form-group button">
+                            <Link to="/register">Registro</Link>
+                            <input type="submit" value="Identificate" />
+                        </div>
+                    </form>
+                )}
             </div>
         </>
     )
